@@ -2,10 +2,8 @@ $(document).ready(function() {
     
     // 1. The Database
     var awardDatabase = {
-        "s1.jpg": "Winner of the 2025 Best Abstract Art Award. Exhibited globally.",
-        "s2.jpg": "Gold Medal for Visual Design at the 2024 Creative Expo.",
-        "s3.jpg": "Recognized for Outstanding Composition by the Arts Council.",
-        "s4.jpg": "First Place: Digital Media Category."
+        "s1.jpg": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "2.jpg": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
     };
 
     // 2. The Logic - Using Event Delegation for dynamically loaded HTML
