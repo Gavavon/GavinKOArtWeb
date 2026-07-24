@@ -406,7 +406,6 @@ img {
   display: block;
   width: 100%;
   overflow: hidden;
-  height: 180px;
   margin: 0 0 20px;
   position: relative;
 }
@@ -453,18 +452,26 @@ img {
   background: #bd1550;
   color: white;
 }
+/* adjust image perameters */
 .thumbnail img {
   width: 100%;
-  position: absolute;
+  max-width: 100%; 
+  display: block;
   top: 0;
   left: 0;
 }
+/* Target your specific gallery row */
+.thumbnails.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .thumbnail:hover {
   color: #333;
   text-decoration: none;
 }
 .thumbnail:hover img {
-  -webkit-filter: saturate(0%);
+  /*-webkit-filter: saturate(0%);*/
 }
 .thumbnail:hover .cover {
   opacity: 1;
