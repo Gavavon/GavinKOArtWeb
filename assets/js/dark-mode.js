@@ -1,14 +1,16 @@
 document.addEventListener("DOMContentLoaded", function() {
     const themeToggleBtn = document.getElementById("themeToggle");
     const body = document.body;
-    const icon = themeToggleBtn.querySelector("i");
 
-    // Check local storage for existing preference
+    // 1. Check local storage for existing preference
     const currentTheme = localStorage.getItem("theme");
-    if (currentTheme === "dark") {
+    
+    // 2. Check if the user's operating system is set to dark mode
+    const systemPrefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+    
+    // 3. Apply dark mode if they explicitly saved it, OR if they have no saved preference AND their system is dark
+    if (currentTheme === "dark" || (currentTheme === null && systemPrefersDark)) {
         body.classList.add("dark-mode");
-        icon.classList.remove("fa-moon-o");
-        icon.classList.add("fa-sun-o");
         themeToggleBtn.innerHTML = '<i class="fa fa-sun-o"></i> Light Mode';
     }
 
