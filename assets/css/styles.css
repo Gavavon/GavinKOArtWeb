@@ -803,3 +803,120 @@ footer.entry-meta .meta-in {
     max-width: 1080px;
   }
 }
+
+/*********************************************************************
+
+
+                                Dark Mode Overrides
+
+
+**********************************************************************/
+body.dark-mode {
+  background-color: #121212;
+  color: #cccccc;
+}
+
+/* Typography */
+
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4,
+body.dark-mode h5,
+body.dark-mode h6,
+
+body.dark-mode .h2,
+body.dark-mode .h3,
+body.dark-mode .h4,
+body.dark-mode .h5,
+body.dark-mode .h6 {
+  color: #ffffff;
+}
+
+body.dark-mode .section-title a,
+body.dark-mode .entry-title a {
+  color: #ffffff;
+}
+
+body.dark-mode .section-title span:before,
+body.dark-mode .entry-title span:before,
+body.dark-mode .section-title span:after,
+body.dark-mode .entry-title span:after {
+  border-bottom: 1px solid #444;
+  border-top: 1px solid #444;
+}
+
+/* Navigation */
+body.dark-mode .navbar-default {
+  background-color: #1a1a1a;
+  border-color: #333333;
+}
+
+body.dark-mode .navbar-default .navbar-nav > li > a {
+  color: #cccccc;
+}
+
+body.dark-mode .navbar-default .navbar-nav > li > a:hover,
+body.dark-mode .navbar-default .navbar-nav > li > a:focus,
+body.dark-mode .navbar-default .navbar-nav > .active > a,
+body.dark-mode .navbar-default .navbar-nav > .active > a:hover,
+body.dark-mode .navbar-default .navbar-nav > .active > a:focus {
+  color: #ffffff;
+  background-color: #1a1a1a;
+}
+
+body.dark-mode .navbar-default .dropdown ul.dropdown-menu {
+  background-color: #1a1a1a;
+}
+
+body.dark-mode .navbar-default .dropdown ul.dropdown-menu > li > a {
+  color: #cccccc;
+}
+
+body.dark-mode .navbar-default .dropdown ul.dropdown-menu > li > a:hover {
+  background-color: #333333;
+  color: #ffffff;
+}
+
+/* Thumbnails & Sections */
+body.dark-mode .thumbnail {
+  background-color: #1a1a1a;
+  color: #cccccc;
+  border: 1px solid #333333;
+}
+
+body.dark-mode .thumbnail:hover {
+  color: #ffffff;
+}
+
+body.dark-mode .thumbnail .cover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Footer (Adjusting to blend better with dark mode) */
+body.dark-mode #footer {
+  background: #0a0a0a;
+}
+
+body.dark-mode #underfooter {
+  background: #000000;
+}
+
+/* Optional: Dark Mode Toggle Button Styling */
+.dark-mode-toggle {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #bd1550;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 50px;
+  cursor: pointer;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+  transition: background-color 0.3s;
+}
+
+.dark-mode-toggle:hover {
+  background-color: #e93675;
+}
