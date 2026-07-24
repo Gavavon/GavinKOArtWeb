@@ -2,8 +2,15 @@ $(document).ready(function() {
     
     // 1. The Database
     var awardDatabase = {
-        "s1.jpg": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        "2.jpg": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        "AGrassyBlend.png": "This painting sold for $100 USD and is now privately owned",
+        "Blood.png": "No current information",
+        "ConfettiConnections.png": "This painting sold for $75 USD and is now privately owned",
+        "Depression.png": "No current information",
+        "GalaxyInGloss.png": "This painting sold for $50 USD and is now privately owned",
+        "NotInMySubway.png": "This painting was gifted and is now privately owned",
+        "Poison.png": "No current information",
+        "Violence.png": "No current information",
+        "s1.jpg": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
     };
 
     // 2. The Logic - Using Event Delegation for dynamically loaded HTML
