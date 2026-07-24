@@ -1,0 +1,25 @@
+<!-- Lightbox Modal -->
+<div class="modal fade" id="lightboxModal" tabindex="-1" role="dialog" aria-labelledby="lightboxModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document" style="width: 90%; max-width: 1000px; margin-top: 10vh;">
+    <!-- Making the modal content transparent so only the image and text show -->
+    <div class="modal-content" style="background-color: transparent; border: none; box-shadow: none;">
+      
+      <!-- Flexbox layout to align image and text side-by-side -->
+      <div class="modal-body" style="display: flex; align-items: center; justify-content: center; gap: 30px; flex-wrap: wrap;">
+        
+        <!-- The Image -->
+        <img src="" id="lightboxImage" style="max-width: 100%; max-height: 75vh; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
+        
+        <!-- The Award Text Container -->
+        <div style="color: #fff; font-size: 16px; line-height: 1.6; max-width: 350px; background: rgba(0, 0, 0, 0.75); padding: 25px; border-radius: 8px; text-align: left;">
+            <!-- Added id="lightboxTitle" right here -->
+            <h4 id="lightboxTitle" style="color: #fff; margin-top: 0; border-bottom: 1px solid #555; padding-bottom: 10px;">Piece Information</h4>
+            <p id="lightboxText"></p>
+            <button type="button" class="btn btn-default btn-sm" data-dismiss="modal" style="margin-top: 15px;">Close</button>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</div>

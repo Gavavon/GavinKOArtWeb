@@ -46,4 +46,16 @@ document.addEventListener("DOMContentLoaded", function() {
             document.getElementById('footer').innerHTML = data;
         })
         .catch(err => console.error("Footer Error:", err));
+
+    // 3. Inject Modal HTML
+    fetch('modal.html')
+        .then(response => {
+            if (!response.ok) throw new Error("Failed to load modal.html");
+            return response.text();
+        })
+        .then(data => {
+            // Insert the snippet into the <div id="modal-placeholder"> tag
+            document.getElementById('modal-placeholder').innerHTML = data;
+        })
+        .catch(err => console.error("Modal Error:", err));
 });

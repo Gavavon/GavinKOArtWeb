@@ -11,7 +11,7 @@
 	<link rel="shortcut icon" href="assets/images/TDSSmallIcon.PNG">
 	
 	<!-- Bootstrap -->
-	<link href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.no-icons.min.css" rel="stylesheet">
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
 	<!-- Icon font -->
 	<link href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
 	<!-- Fonts -->
@@ -36,7 +36,7 @@
 				<!-- <a class="thumbnail" href="individualpaintingpage.html"> -->
 
 				<div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
-					<a class="thumbnail">
+					<a class="thumbnail" data-toggle="modal" data-target="#lightboxModal">
 						<span class="img"><img src="assets/images/s1.jpg" alt=""></span>
 						<span class="title">A Hollow Soul</span>
 					</a>
@@ -46,7 +46,7 @@
 				</div>
 				
 				<div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
-					<a class="thumbnail">
+					<a class="thumbnail" data-toggle="modal" data-target="#lightboxModal">
 						<span class="img"><img src="assets/Art/ConfettiConnections.png" alt=""></span>
 						<span class="title">Confetti Connections</span>
 					</a>
@@ -55,7 +55,7 @@
 				</div>
 				
 				<div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
-					<a class="thumbnail">
+					<a class="thumbnail" data-toggle="modal" data-target="#lightboxModal">
 						<span class="img"><img src="assets/Art/Depression.png" class="img-fluid" alt=""></span>
 						<span class="title">Depression</span>
 					</a>
@@ -64,7 +64,7 @@
 				</div>
 
 				<div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
-					<a class="thumbnail">
+					<a class="thumbnail" data-toggle="modal" data-target="#lightboxModal">
 						<span class="img"><img src="assets/Art/Blood.png" alt=""></span>
 						<span class="title">Blood</span>
 					</a>
@@ -73,7 +73,7 @@
 				</div>
 				
 				<div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
-					<a class="thumbnail">
+					<a class="thumbnail" data-toggle="modal" data-target="#lightboxModal">
 						<span class="img"><img src="assets/Art/Poison.png" alt=""></span>
 						<span class="title">Poison</span>
 					</a>
@@ -82,7 +82,7 @@
 				</div>
 
 				<div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
-					<a class="thumbnail">
+					<a class="thumbnail" data-toggle="modal" data-target="#lightboxModal">
 						<span class="img"><img src="assets/Art/Violence.png" alt=""></span>
 						<span class="title">Violence</span>
 					</a>
@@ -91,7 +91,7 @@
 				</div>
 
 				<div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
-					<a class="thumbnail">
+					<a class="thumbnail" data-toggle="modal" data-target="#lightboxModal">
 						<span class="img"><img src="assets/Art/A Grassy Blend.png" alt=""></span>
 						<span class="title">A Grassy Blend</span>
 					</a>
@@ -100,7 +100,7 @@
 				</div>
 
 				<div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
-					<a class="thumbnail">
+					<a class="thumbnail" data-toggle="modal" data-target="#lightboxModal">
 						<span class="img"><img src="assets/Art/Galaxy in Gloss.png" alt=""></span>
 						<span class="title">A Galaxy in Gloss</span>
 					</a>
@@ -109,7 +109,7 @@
 				</div>
 
 				<div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
-					<a class="thumbnail">
+					<a class="thumbnail" data-toggle="modal" data-target="#lightboxModal">
 						<span class="img"><img src="assets/Art/Not in my Subway.png" alt=""></span>
 						<span class="title">Not in my Subway</span>
 					</a>
@@ -124,14 +124,18 @@
 	
 </main>
 
+<!-- Modal injected via nav-loader.js -->
+<div id="modal-placeholder"></div>
+
 <footer id="footer" class="topspace"></footer>
 
 
 
 <!-- JavaScript libs are placed at the end of the document so the pages load faster -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-<script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <script src="assets/js/template.js"></script>
 <script src="assets/js/nav-loader.js"></script>
+<script src="assets/js/modal-handler.js"></script>
 </body>
 </html>
