@@ -125,10 +125,18 @@ var artDatabase = {
         size: "20\"x16\"",
         award: "No current information"
     },
-    "Spires.png": {
-        title: "Spires",
-        image: "assets/Art/Spires.png",
+    "BrokenSpires.png": {
+        title: "Broken Spires",
+        image: "assets/Art/BrokenSpires.png",
         thumb: "assets/Art/thumbs/Spires.jpg",
+        date: "August 6, 2026",
+        size: "20\"x16\"",
+        award: "No current information"
+    },
+    "BridgesUnbroken.png": {
+        title: "Bridges Unbroken",
+        image: "assets/Art/BridgesUnbroken.png",
+        thumb: "assets/Art/thumbs/BridgesUnbroken.jpg",
         date: "August 6, 2026",
         size: "20\"x16\"",
         award: "No current information"
@@ -142,7 +150,7 @@ var artDatabase = {
         award: "No current information"
     },
     "DarkDistricts.png": {
-        title: "DarkDistricts",
+        title: "Dark Districts",
         image: "assets/Art/DarkDistricts.png",
         thumb: "assets/Art/thumbs/DarkDistricts.jpg",
         date: "August 6, 2026",
