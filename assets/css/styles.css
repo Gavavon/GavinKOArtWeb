@@ -474,6 +474,24 @@ img {
   justify-content: center;
 }
 
+/* Masonry packing for the full gallery page only (#fullGallery, sidebar-left.html).
+   gallery-loader.js sets each item's grid-row-end span to its real rendered
+   height, so images keep their natural size and shorter neighbors fill the
+   gap a taller image would otherwise leave. Left scoped to this one ID so it
+   can't affect #recentWorks or any other page's layout. */
+#fullGallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  grid-auto-rows: 8px;
+  gap: 20px;
+}
+#fullGallery > div {
+  width: 100%;
+  float: none;
+  padding: 0;
+  margin-bottom: 0;
+}
+
 .thumbnail:hover {
   color: #333;
   text-decoration: none;

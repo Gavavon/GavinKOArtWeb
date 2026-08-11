@@ -1,19 +1,8 @@
 $(document).ready(function() {
-    
-    // 1. The Database
-    var awardDatabase = {
-        "AGrassyBlend.png": "This painting sold for $100 USD and is now privately owned",
-        "Blood.png": "No current information",
-        "ConfettiConnections.png": "This painting sold for $75 USD and is now privately owned",
-        "Depression.png": "No current information",
-        "GalaxyInGloss.png": "This painting sold for $50 USD and is now privately owned",
-        "NotInMySubway.png": "This painting was gifted and is now privately owned",
-        "Poison.png": "No current information",
-        "Violence.png": "No current information",
-        "s1.jpg": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    };
 
-    // 2. The Logic - Using Event Delegation for dynamically loaded HTML
+    // The painting database now lives in art-database.js (loaded before this file)
+
+    // The Logic - Using Event Delegation for dynamically loaded HTML
     $(document).on('show.bs.modal', '#lightboxModal', function (event) {
         
         // event.relatedTarget is the specific <a> tag that triggered the modal
@@ -34,25 +23,34 @@ $(document).ready(function() {
         var fileName = fullImgSrc.split('/').pop();
         
         // Look up the extracted filename in our database
-        var awardText = awardDatabase[fileName];
-        
+        var artEntry = artDatabase[fileName];
+        var awardText = artEntry && artEntry.award;
+
         // Fallback text if the image isn't listed
         if (!awardText) {
             awardText = "No award information available for this piece.";
         }
 
+        // Build the date/size line, e.g. "October 28, 2025 ~ 11"x14""
+        var detailsText = "";
+        if (artEntry && (artEntry.date || artEntry.size)) {
+            detailsText = [artEntry.date, artEntry.size].filter(Boolean).join(" ~ ");
+        }
+
         // Find the modal itself and update the content
         var $modal = $(this);
-        $modal.find('#lightboxImage').attr('src', fullImgSrc); 
+        $modal.find('#lightboxImage').attr('src', fullImgSrc);
         $modal.find('#lightboxTitle').text(imageTitle); // Inject the dynamic title
+        $modal.find('#lightboxDetails').text(detailsText);
         $modal.find('#lightboxText').text(awardText);
     });
-    
+
     // Clear the modal content when it closes so it resets cleanly
     $(document).on('hidden.bs.modal', '#lightboxModal', function () {
         var $modal = $(this);
         $modal.find('#lightboxImage').attr('src', '');
         $modal.find('#lightboxTitle').text('Award Information'); // Reset the title
+        $modal.find('#lightboxDetails').text('');
         $modal.find('#lightboxText').text('');
     });
 });
