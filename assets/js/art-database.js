@@ -97,7 +97,7 @@ var artDatabase = {
         title: "Muted Shine",
         image: "assets/Art/MutedShine.png",
         thumb: "assets/Art/thumbs/MutedShine.jpg",
-        date: "January 14, 2026",
+        date: "January 18, 2026",
         size: "20\"x16\"",
         award: "No current information"
     },
