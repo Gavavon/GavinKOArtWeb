@@ -8,23 +8,27 @@ $(document).ready(function() {
         // event.relatedTarget is the specific <a> tag that triggered the modal
         var $clickedThumbnail = $(event.relatedTarget);
         
-        // Get the full image source
-        var fullImgSrc = $clickedThumbnail.find('img').attr('src');
-        
+        // Prefer the explicit data-filename set by gallery-loader.js (works even
+        // when the thumbnail's own <img> points at a downscaled thumb copy);
+        // fall back to parsing the clicked <img>'s src for hand-written thumbnails.
+        var clickedImgSrc = $clickedThumbnail.find('img').attr('src');
+        var fileName = $clickedThumbnail.attr('data-filename') || (clickedImgSrc ? clickedImgSrc.split('/').pop() : '');
+
         // Extract the title text from the <span class="title"> inside the clicked link
         var imageTitle = $clickedThumbnail.find('.title').text();
-        
+
         // Fallback title just in case the span is empty or missing
         if (!imageTitle) {
             imageTitle = "Artwork Details";
         }
-        
-        // Extract just the filename (e.g., "s1.jpg")
-        var fileName = fullImgSrc.split('/').pop();
-        
+
         // Look up the extracted filename in our database
         var artEntry = artDatabase[fileName];
         var awardText = artEntry && artEntry.award;
+
+        // Always show the full-resolution original in the modal, even if the
+        // thumbnail that was clicked used a downscaled copy for speed.
+        var fullImgSrc = (artEntry && artEntry.image) || clickedImgSrc;
 
         // Fallback text if the image isn't listed
         if (!awardText) {

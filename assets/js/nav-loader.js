@@ -4,9 +4,21 @@
  */
 
 document.addEventListener("DOMContentLoaded", function() {
-    
+
+    // Reveal the page once header + footer are in place, so navigating between
+    // pages doesn't flash the bare, nav-less layout first (see styles.css
+    // .nav-ready). Guarded by a timeout so a slow/failed fetch never leaves
+    // the page stuck invisible.
+    var revealed = false;
+    function reveal() {
+        if (revealed) return;
+        revealed = true;
+        document.body.classList.add('nav-ready');
+    }
+    var revealTimeout = setTimeout(reveal, 1500);
+
     // 1. Inject Header HTML
-    fetch('header.html')
+    var headerLoaded = fetch('header.html')
         .then(response => {
             if (!response.ok) throw new Error("Failed to load header.html");
             return response.text();
@@ -18,7 +30,7 @@ document.addEventListener("DOMContentLoaded", function() {
             // --- Handling the "Active" Page Link ---
             const currentPath = window.location.pathname.split("/").pop() || 'index.html';
             const navLinks = document.querySelectorAll('.navbar-nav a');
-            
+
             navLinks.forEach(link => {
                 link.parentElement.classList.remove('active');
                 if (link.getAttribute('href') === currentPath) {
@@ -29,7 +41,7 @@ document.addEventListener("DOMContentLoaded", function() {
     .catch(err => console.error("Header Error:", err));
 
     // 2. Inject Footer HTML
-    fetch('footer.html')
+    var footerLoaded = fetch('footer.html')
         .then(response => {
             if (!response.ok) throw new Error("Failed to load footer.html");
             return response.text();
@@ -38,6 +50,11 @@ document.addEventListener("DOMContentLoaded", function() {
             document.getElementById('footer').innerHTML = data;
         })
         .catch(err => console.error("Footer Error:", err));
+
+    Promise.all([headerLoaded, footerLoaded]).then(() => {
+        clearTimeout(revealTimeout);
+        reveal();
+    });
 
     // 3. Inject Modal HTML
     fetch('modal.html')

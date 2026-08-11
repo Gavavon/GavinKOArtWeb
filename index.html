@@ -9,7 +9,13 @@
 	<title>KO Art Home</title>
 
 	<link rel="shortcut icon" href="assets/images/TDSSmallIcon.PNG">
-	
+
+	<!-- Speed up the external CDN requests below -->
+	<link rel="preconnect" href="https://maxcdn.bootstrapcdn.com" crossorigin>
+	<link rel="preconnect" href="https://netdna.bootstrapcdn.com" crossorigin>
+	<link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+	<link rel="preconnect" href="https://ajax.googleapis.com" crossorigin>
+
 	<!-- Bootstrap -->
 	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
 	<!-- Icons -->
@@ -39,28 +45,28 @@
 				<div class="thumbnails recentworks">
 				
 				<div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
-					<a class="thumbnail" data-toggle="modal" data-target="#lightboxModal">
-						<span class="img"><img src="assets/Art/DarkDistricts.png" alt=""></span>
+					<a class="thumbnail" data-toggle="modal" data-target="#lightboxModal" data-filename="DarkDistricts.png">
+						<span class="img"><img src="assets/Art/thumbs/DarkDistricts.jpg" alt="" loading="lazy" decoding="async"></span>
 						<span class="title">Dark Districts</span>
 						<h4></h4>
 					</a>
 					<h4></h4>
 					<p></p>
 				</div>
-				
+
 				<div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
-					<a class="thumbnail" data-toggle="modal" data-target="#lightboxModal">
-						<span class="img"><img src="assets/Art/HollowSoul.png" alt=""></span>
+					<a class="thumbnail" data-toggle="modal" data-target="#lightboxModal" data-filename="HollowSoul.png">
+						<span class="img"><img src="assets/Art/thumbs/HollowSoul.jpg" alt="" loading="lazy" decoding="async"></span>
 						<span class="title">Hollow Soul</span>
 						<h4></h4>
 					</a>
 					<h4></h4>
 					<p></p>
 				</div>
-				
+
 				<div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
-					<a class="thumbnail" data-toggle="modal" data-target="#lightboxModal">
-						<span class="img"><img src="assets/Art/GalaxyInGloss.png" alt=""></span>
+					<a class="thumbnail" data-toggle="modal" data-target="#lightboxModal" data-filename="GalaxyInGloss.png">
+						<span class="img"><img src="assets/Art/thumbs/GalaxyInGloss.jpg" alt="" loading="lazy" decoding="async"></span>
 						<span class="title">Galaxy in Gloss</span>
 						<h4></h4>
 					</a>

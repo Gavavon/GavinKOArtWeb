@@ -13,6 +13,19 @@ body {
   color: #666666;
   padding: 0;
 }
+/* Header/footer/modal are injected by nav-loader.js after the page paints.
+   Stay hidden until they're actually in place so navigating between pages
+   doesn't flash the bare, nav-less layout first. nav-loader.js adds
+   .nav-ready once header.html + footer.html have loaded (or a short
+   timeout elapses, so a slow/failed fetch never leaves the page stuck
+   invisible). */
+body {
+  opacity: 0;
+}
+body.nav-ready {
+  opacity: 1;
+  transition: opacity 150ms ease-in;
+}
 .topspace {
   margin-top: 40px;
 }

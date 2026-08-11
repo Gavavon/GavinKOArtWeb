@@ -15,8 +15,12 @@ $(document).ready(function() {
 
         var $item = $('<div class="col-xs-12 col-sm-6 col-md-4 col-lg-4"></div>');
 
-        var $thumbnail = $('<a class="thumbnail" data-toggle="modal" data-target="#lightboxModal"></a>');
-        $thumbnail.append($('<span class="img"></span>').append($('<img>').attr('src', art.image).attr('alt', '')));
+        // data-filename lets modal-handler.js look the painting up in artDatabase
+        // directly, so it can load the full-resolution original rather than
+        // whatever (possibly downscaled) image src the thumbnail itself used.
+        var $thumbnail = $('<a class="thumbnail" data-toggle="modal" data-target="#lightboxModal"></a>').attr('data-filename', fileName);
+        var $img = $('<img>').attr('src', art.thumb || art.image).attr('alt', '').attr('loading', 'lazy').attr('decoding', 'async');
+        $thumbnail.append($('<span class="img"></span>').append($img));
         $thumbnail.append($('<span class="title"></span>').text(art.title));
         $thumbnail.append('<h4></h4>');
 
