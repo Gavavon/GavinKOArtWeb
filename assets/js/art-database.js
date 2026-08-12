@@ -101,9 +101,9 @@ var artDatabase = {
         size: "20\"x16\"",
         award: "No current information"
     },
-    "SpillGlass.png": {
-        title: "Spill a Little in the Glass",
-        image: "assets/Art/SpillGlass.png",
+    "SpillGloss.png": {
+        title: "Spill a Little in the Gloss",
+        image: "assets/Art/SpillGloss.png",
         thumb: "assets/Art/thumbs/SpillGlass.jpg",
         date: "August 6, 2026",
         size: "14\"x18\"",
