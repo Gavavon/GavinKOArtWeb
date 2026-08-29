@@ -83,7 +83,7 @@ var artDatabase = {
         thumb: "assets/Art/thumbs/HollowSoul.jpg",
         date: "November 19, 2025",
         size: "36\"x26\"",
-        award: "This painting sold for $300 USD and is now privately owned"
+        award: "Privately owned"
     },
     "ChildsPlay.png": {
         title: "Child's Play",
@@ -156,5 +156,62 @@ var artDatabase = {
         date: "August 6, 2026",
         size: "16\"x20\"",
         award: "No current information"
+    },
+    "Comics.png": {
+        title: "Comics",
+        image: "assets/Art/Comics.png",
+        thumb: "assets/Art/thumbs/Comics.jpg",
+        date: "August 13, 2026",
+        size: "20\"x16\"",
+        award: "No current information"
+    },
+    "OilSpill.png": {
+        title: "Oil Spill",
+        image: "assets/Art/OilSpill.png",
+        thumb: "assets/Art/thumbs/OilSpill.jpg",
+        date: "August 13, 2026",
+        size: "16\"x20\"",
+        award: "No current information"
+    },
+    "MixedFeelings.png": {
+        title: "Mixed Feelings",
+        image: "assets/Art/MixedFeelings.png",
+        thumb: "assets/Art/thumbs/MixedFeelings.jpg",
+        date: "August 13, 2026",
+        size: "7\"x5\"",
+        award: "No current information"
+    },
+    "WrongImpressions.png": {
+        title: "Wrong Impressions",
+        image: "assets/Art/WrongImpressions.png",
+        thumb: "assets/Art/thumbs/WrongImpressions.jpg",
+        date: "August 13, 2026",
+        size: "20\"x16\"",
+        award: "No current information"
+    },
+    "LinesLikeDots.png": {
+        title: "Lines Like Dots",
+        image: "assets/Art/LinesLikeDots.png",
+        thumb: "assets/Art/thumbs/LinesLikeDots.jpg",
+        date: "August 13, 2026",
+        size: "16\"x20\"",
+        award: "No current information"
+    },
+    "GalaxyOnFire.png": {
+        title: "Galaxy On Fire",
+        image: "assets/Art/GalaxyOnFire.png",
+        thumb: "assets/Art/thumbs/GalaxyOnFire.jpg",
+        date: "August 13, 2026",
+        size: "20\"x16\"",
+        award: "This painting sold for $300 USD and is now privately owned"
+    },
+    "Drip32.png": {
+        title: "Drip 32",
+        image: "assets/Art/Drip32.png",
+        thumb: "assets/Art/thumbs/Drip32.jpg",
+        date: "August 13, 2026",
+        size: "?\"x?\"",
+        award: "No current information"
     }
+    
 };
