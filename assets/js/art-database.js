@@ -78,7 +78,7 @@ var artDatabase = {
         award: "This painting sold for $75 USD and is now privately owned"
     },
     "HollowSoul.png": {
-        title: "A Hollow Soul",
+        title: "Hollow Soul",
         image: "assets/Art/HollowSoul.png",
         thumb: "assets/Art/thumbs/HollowSoul.jpg",
         date: "November 19, 2025",
@@ -91,7 +91,7 @@ var artDatabase = {
         thumb: "assets/Art/thumbs/ChildsPlay.jpg",
         date: "January 14, 2026",
         size: "20\"x20\"",
-        award: "No current information"
+        award: "Shown in Colors of Humanity Art Gallery' 'Wet Paint' Exhibition."
     },
     "MutedShine.png": {
         title: "Muted Shine",
@@ -107,7 +107,7 @@ var artDatabase = {
         thumb: "assets/Art/thumbs/SpillGlass.jpg",
         date: "August 6, 2026",
         size: "14\"x18\"",
-        award: "No current information"
+        award: "Shown in Colors of Humanity Art Gallery' 'Wet Paint' Exhibition."
     },
     "Conflict.png": {
         title: "Conflict",
