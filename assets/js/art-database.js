@@ -197,10 +197,10 @@ var artDatabase = {
         size: "16\"x20\"",
         award: "No current information"
     },
-    "GalaxyOnFire.png": {
-        title: "Galaxy On Fire",
-        image: "assets/Art/GalaxyOnFire.png",
-        thumb: "assets/Art/thumbs/GalaxyOnFire.jpg",
+    "GalaxyInFlames.png": {
+        title: "Galaxy In Flames",
+        image: "assets/Art/GalaxyInFlames.png",
+        thumb: "assets/Art/thumbs/GalaxyInFlames.jpg",
         date: "August 13, 2026",
         size: "20\"x16\"",
         award: "This painting sold for $300 USD and is now privately owned"
