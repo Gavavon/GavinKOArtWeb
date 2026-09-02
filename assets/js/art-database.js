@@ -2,7 +2,7 @@
  * art-database.js
  * Single source of truth for painting metadata: title, image, date,
  * size, and award/ownership info. Used by modal-handler.js (award text),
- * sidebar-left.html (full gallery), and index.html (recent works).
+ * gallery.html (full gallery), and index.html (recent works).
  *
  * `image` is the full-resolution original, used by the modal/lightbox.
  * `thumb` is a small, compressed copy (assets/Art/thumbs/) used only for

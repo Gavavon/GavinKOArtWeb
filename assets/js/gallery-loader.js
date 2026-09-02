@@ -2,7 +2,7 @@
  * gallery-loader.js
  * Builds painting thumbnail grids from artDatabase (assets/js/art-database.js)
  * instead of hand-written HTML:
- *  - #fullGallery on sidebar-left.html: the entire database, newest first
+ *  - #fullGallery on gallery.html: the entire database, newest first
  *  - #recentWorks on index.html: the 6 most recently added paintings
  */
 $(document).ready(function() {
